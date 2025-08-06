@@ -9,7 +9,7 @@ npm install react-bootstrap bootstrap
 npm install react-icons
 npm install react-paginate
 npm i react-router-dom   
-npm i mongosse 
+npm i mongoose 
 npm install cors
 npm install --save mongoose-sequence
 npm start
