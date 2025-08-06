@@ -7,11 +7,14 @@ const Product = require('../models/Product');
 /* La manière standard et recommandée de construire une API 
     est de suivre la convention chemin?paramètre=valeur. */
 
+//example   http://localhost:8000/amazon/available-stock
+
 // Exemple GET all books
 router.get('/all', async (req, res) => {
   const products = await Product.find();
   console.log('Produits trouvés :', products);
   res.json(products);
+//   http://localhost:8000/amazon/all
 });
 
 // Exemple GET available stock only 
@@ -108,5 +111,6 @@ router.get('/rating', async (req, res) => {
 //   http://localhost:8000/amazon/rating?min=5&max=10
 
 });
+
 
 module.exports = router;
