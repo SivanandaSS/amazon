@@ -1,5 +1,5 @@
 BACK-END
-// pa 
+// package must be installed
 npm install express
 npm install cors
 npm install mongoose 
