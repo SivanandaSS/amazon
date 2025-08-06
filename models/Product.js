@@ -1,5 +1,7 @@
 // Roots/amazon.js
 const mongoose = require('mongoose');
+const AutoIncrement = require('mongoose-sequence')(mongoose);
+
 const { Schema } = mongoose;
 
 const formatSchema = new Schema({
@@ -52,6 +54,7 @@ const productSchema = new Schema({
   best_sellers_rank: { type: [bestSellersRankSchema] }
 });
 
+productSchema.plugin(AutoIncrement, { inc_field: 'id' });
 const Product = mongoose.model('Product', productSchema, 'amazon');
 
 module.exports = Product;
